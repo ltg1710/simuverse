@@ -3,7 +3,7 @@ resolver = "2"
 members = [
     "simuverse",
     "launchers/wasm-run",
-    "launchers/wasm-gh-pages",
+    "launchers/wasm-gh",
 ]
 default-members = ["simuverse"]
 

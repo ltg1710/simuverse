@@ -20,7 +20,7 @@ jobs:
 
       - name: Build | Trunk
         run: |
-          cd launchers/wasm-gh-pages
+          cd launchers/wasm-gh
           trunk build --release --public-url ${{ env.PUBLIC_URL }}
 
       - name: Post Build | Upload dist
