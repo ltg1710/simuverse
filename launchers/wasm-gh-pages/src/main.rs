@@ -1,13 +1,16 @@
 use stylist::yew::styled_component;
 use stylist::{css, global_style};
 use yew::prelude::*;
+use simuverse::*;
+
+const LAUNCHER_TITLE:&str = "simuverse";
 
 fn set_window_title(title: &str) {
     web_sys::window()
         .map(|w| w.document())
         .flatten()
         .expect("Unable to get DOM")
-        .set_title("Simuverse");
+        .set_title(title);
 }
 
 fn set_global_css() {
@@ -43,7 +46,7 @@ fn view() -> Html {
 
     html! {
         <div class={ css }>
-            <canvas id="bevy"></canvas>
+            <canvas id="wasm"></canvas>
         </div>
     }
 }

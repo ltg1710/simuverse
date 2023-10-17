@@ -14,4 +14,8 @@ wasm/
 .vscode
 .idea
 
+# Trunk serve assets/dist
+launchers/wasm-gh-pages/assets
+launchers/wasm-gh-pages/dist
+
 debug.xcodeproj
