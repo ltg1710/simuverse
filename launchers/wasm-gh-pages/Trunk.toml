@@ -6,8 +6,8 @@ target = "index.html"
 
 [watch]
 watch = [
-    "../../src",    # Game source
-    "src",          # WASM launcher source
+    "../../simuverse/src",    # Simuverse source
+    "src",                    # WASM launcher source
     "static/",
     "index.html"
 ]
