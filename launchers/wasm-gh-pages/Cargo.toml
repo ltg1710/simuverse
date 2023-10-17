@@ -1,0 +1,11 @@
+[package]
+name = "wasm-ph"
+version = "0.1.0"
+edition = "2021"
+workspace = "../.."
+
+[dependencies]
+simuverse = { path = "../../simuverse" }
+web-sys = { version="0.3.61", features=["Document", "Window"] }
+yew = "0.21.0"
+stylist = { version= "0.13.0", features=["yew_integration"] }

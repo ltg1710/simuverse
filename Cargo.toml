@@ -1,4 +1,15 @@
 [workspace]
 resolver = "2"
-members = ["simuverse", "run-wasm"]
+members = [
+    "simuverse",
+    "launchers/wasm-run",
+    "launchers/wasm-gh-pages",
+]
 default-members = ["simuverse"]
+
+[profile.release]
+opt-level = "z"     # Optimize for size.
+lto = true          # Enable Link Time Optimization
+codegen-units = 1   # Reduce number of codegen units to increase optimizations.
+panic = "abort"     # Abort on panic
+strip = true        # Automatically strip symbols from the binary.
