@@ -14,5 +14,15 @@ watch = [
 
 [[hooks]]
 stage = "pre_build"
+command = "mkdir"
+command_arguments = ["assets"]
+
+[[hooks]]
+stage = "build"
 command = "cp"
-command_arguments = ["-r", "../../assets", "."]
+command_arguments = ["-r", "../../assets/cloth_500x500.png", "./assets/cloth_500x500.png"]
+
+[[hooks]]
+stage = "post_build"
+command = "cp"
+command_arguments = ["-r", "../../assets/preprocessed-wgsl", "./assets/"]
