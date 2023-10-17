@@ -22,6 +22,11 @@ jobs:
         run: |
           cd launchers/wasm-gh
           trunk build --release --public-url ${{ env.PUBLIC_URL }}
+      
+      - name: Post Build | Copy assets
+        run: |
+          cd launchers/wasm-gh
+          cp -r assets\ dist\
 
       - name: Post Build | Upload dist
         uses: actions/upload-artifact@v3
